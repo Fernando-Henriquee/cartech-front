@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.LoginForm = this.formBuilder.group({
-      username: ['',[Validators.required, Validators.email]],
+      username: ['',[Validators.required]],
       password: ['',[Validators.required]],
     });
   }
@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
   submitLogin(){
     debugger
     var dadosLogin = this.LoginForm.getRawValue() as LoginModel;
+    console.log(dadosLogin);
   }
 
 }

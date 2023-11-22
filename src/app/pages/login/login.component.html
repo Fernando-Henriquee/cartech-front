@@ -1,7 +1,7 @@
 <div class="conteudo-login">
-  <form class="conteudo-form" [formGroup]="LoginForm" (submit)="submitLogin">
+  <form class="conteudo-form" [formGroup]="LoginForm" (submit)="submitLogin()">
     <div class="logo">
-      <img src="https://www.cartechautomotive.com.br/wp-content/uploads/2021/12/logo_cartech_automotive_systems.png" alt="">
+      <img style="width: 100%;" src="https://www.cartechautomotive.com.br/wp-content/uploads/2021/12/logo_cartech_automotive_systems.png" alt="">
     </div>
     <div>
         <div>
@@ -9,9 +9,6 @@
         </div>
         <div class="mensage-error" *ngIf="LoginForm.get('username')?.errors?.required && LoginForm.get('username')?.touched">
           Campo obrigatório!
-        </div>
-        <div class="mensage-error" *ngIf="LoginForm.get('username')?.errors?.username && LoginForm.get('username')?.touched">
-          Email inválido
         </div>
     </div>
 
